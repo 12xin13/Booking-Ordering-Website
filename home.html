@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BookXcess - Book Ordering</title>
+<link rel="icon" href="images/logo.png" type="image/png">
+<link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<!-----------header----------->
+<div class="header">
+  <div class="container">
+    <div class="navbar">
+      <div class="logo"> <a href="home.html"> <img src="images/logo1.png" width="45px" alt=""> </a> </div>
+      <nav>
+        <ul>
+          <li><a href="home.html" class="active">Home</a></li>
+          <li><a href="order.html">Books</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Cancellation &amp; Return</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+<!-----------photo slider----------->
+<div class="slider">
+  <div class="list">
+    <div class="item"> <img src="images/Banner1.jpg" alt=""> </div>
+    <div class="item"> <img src="images/Banner2.jpg" alt=""> </div>
+    <div class="item"> <img src="images/Banner3.jpg" alt=""> </div>
+    <div class="item"> <img src="images/Banner4.jpg" alt=""> </div>
+  </div>
+  <div class="buttons">
+    <button id="prev">&lt;</button>
+    <button id="next">&gt;</button>
+  </div>
+  <ul class="dots">
+    <li class="active"></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+<div>
+  <h1 class="member-title title">MEMBERS'<br>
+    DISCOUNT<br>
+    <a href="home.html#login">
+    <button class="member" onclick="showLogin()">Login</button>
+    </a> <a href="home.html#register">
+    <button class="member" onclick="showRegister()">Register</button>
+    </a> </h1>
+  <div class="back" id="login">
+    <h3>Member Login</h3>
+    <div class="form">
+      <center>
+          <table>
+            <tr>
+              <td><label for="lbl_email" class="lbl">E-mail</label></td>
+              <td><input id="txt_email" name="txt_email" class="txt" type="email" required></td>
+            </tr>
+            <tr>
+              <td><label for="lbl_passw" class="lbl">Password</label></td>
+              <td><input id="txt_passw" name="txt_passw" class="txt" type="password" required></td>
+            </tr>
+            <tr>
+              <td colspan="2" text-align="center"><center>
+                  <button id="lSubmit" class="button" onClick="validateAndSubmit()">Submit</button>
+                </center></td>
+            </tr>
+          </table>
+      </center>
+    </div>
+  </div>
+  <div class="back" id="register">
+    <h3>Member Registration</h3>
+    <div class="form">
+      <center>
+        <table>
+          <tr>
+            <td colspan="2" text-align="center"><h4>Personal Details</h4></td>
+            <td colspan="2" text-align="center"><h4>Shipping Information</h4></td>
+          </tr>
+          <tr>
+            <td><label for="lbl_firstn" class="lbl">First Name</label></td>
+            <td><input id="txt_firstn" name="txt_firstn" class="txt_right" type="text" required></td>
+            <td><label for="lbl_address" class="lbl">Street Address</label></td>
+            <td><input id="txt_address" name="txt_address" class="txt" type="text" required></td>
+          </tr>
+          <tr>
+            <td><label for="lbl_lastn" class="lbl">Last Name</label></td>
+            <td><input id="txt_lastn" name="txt_lastn" class="txt_right" type="text" required></td>
+            <td><label for="lbl_zip" class="lbl">Zip Code</label></td>
+            <td><input id="txt_zip" name="txt_zip" class="txt" type="text" required></td>
+          </tr>
+          <tr>
+            <td><label for="lbl_em" class="lbl">E-mail</label></td>
+            <td><input id="txt_em" name="txt_em" class="txt_right" type="email" required></td>
+            <td><label for="lbl_city" class="lbl">City</label></td>
+            <td><input id="txt_city" name="txt_city" class="txt" type="text" ></td>
+          </tr>
+          <tr>
+            <td><label for="lbl_phone" class="lbl">Phone Number</label></td>
+            <td><input id="txt_phone" name="txt_phone" class="txt_right" type="tel"  pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required></td>
+            <td><label for="lbl_state" class="lbl">State</label></td>
+            <td><select id="slt_state" name="slt_state" class="ddl">
+                <option value="Johor">Johor</option>
+                <option value="Kedah">Kedah</option>
+                <option value="Kelantan">Kelantan</option>
+                <option value="Kuala Lumpur">Kuala Lumpur</option>
+                <option value="Labuan">Labuan</option>
+                <option value="Malacca">Malacca</option>
+                <option value="Negeri Sembilan">Negeri Sembilan</option>
+                <option value="Pahang">Pahang</option>
+                <option value="Penang">Penang</option>
+                <option value="Perak">Perak</option>
+                <option value="Perlis">Perlis</option>
+                <option value="Putrajaya">Putrajaya</option>
+                <option value="Sabah">Sabah</option>
+                <option value="Sarawak">Sarawak</option>
+                <option value="Selangor">Selangor</option>
+                <option value="Terengganu">Terengganu</option>
+              </select></td>
+          </tr>
+          <tr>
+            <td><label for="lbl_password" class="lbl">Password</label></td>
+            <td><input id="txt_password" name="txt_password" class="txt_right" type="password" required></td>
+            <td><label for="lbl_country" class="lbl">Country</label></td>
+            <td><select id="slt_country" name="slt_country" class="ddl">
+                <option value="Malaysia">Malaysia</option>
+                <option value="Singapore">Singapore</option>
+              </select></td>
+          </tr>
+          <tr>
+            <td colspan="4" text-align="center"><center>
+                <button id="rSubmit" class="button" onClick="validateAndSubmitForm()">Submit</button>
+              </center></td>
+          </tr>
+        </table>
+      </center>
+    </div>
+  </div>
+</div>
+<div>
+  <h1 class="aboutus-title">ABOUT US</h1>
+  <div class="back">
+    <h3>WORLD'S BEST BOOKSTORE</h3>
+    <p>Since opening our doors in 2007, BookXcess has reinvigorated and redefined bookselling in Malaysia and beyond, offering an unparalleled range of affordably priced books - from classic novels to children’s pop-ups to bestselling self-help titles.<br>
+      Our mission is to create, inspire and empower readers and to inculcate the reading habit by making books accessible to and affordable for all. We are industry icons, set on reinventing the book industry.<br>
+      Dynamic, creative and innovative, and with a rapidly growing network of ground-breaking and inspirational stores, we deliver millions of books to readers globally through our seamless digital and retail experience.</p>
+  </div>
+</div>
+<!-----------footer----------->
+<div class="footer back">
+  <table class="tbl" width="60%;">
+    <tr>
+      <td style="text-align: center;"><a href="home.html"><img src="images/logo.png" alt="" style="width: 50px;"></a><br>
+        <a href="https://www.instagram.com/bookxcess"><i class="fa fa-instagram" aria-hidden="true"></i></a> <a href="https://www.facebook.com/BookXcess"><i class="fa fa-facebook-official" aria-hidden="true"></i></a> <a href="https://www.youtube.com/channel/UCA00dU7ihmJdqey0NO443bA"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></td>
+      <td style="text-align: center;"><a href="order.html">
+        <h3>Order Online</h3>
+        </a> <a href="#">
+        <h3>Privacy Policy</h3>
+        </a></td>
+      <td style="text-align: center;"><a href="#">
+        <h3>Careers</h3>
+        </a> <a href="#">
+        <h3>Contact Us</h3>
+        </a></td>
+    </tr>
+  </table>
+  <h3>All Rights Reserved by Huang Shi Xin AI210414.</h3>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    alert('Welcome to BookXcess website!');
+});
+	
+function showLogin() {
+	document.getElementById('login').style.display = 'block';
+	document.getElementById('register').style.display = 'none';
+}
+
+function showRegister() {
+	document.getElementById('register').style.display = 'block';
+	document.getElementById('login').style.display = 'none';
+}
+	
+function validateAndSubmit() {
+	var email = document.getElementById('txt_email').value;
+	var password = document.getElementById('txt_passw').value;
+	
+	if (email === "" || password === "") {
+		alert("Please fill in all fields");
+	} else {
+		if (!validateEmail(email)) {
+			alert('Invalid email format');
+			return;
+		}
+		if (password.length < 6) {
+			alert('Password must be at least 6 characters password');
+			return;
+		}
+		submitFormToDatabase(email, password);
+	}
+}
+	
+function submitFormToDatabase(email, password) {
+	/*fetch('your_server_script.php', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify({
+			email: email,
+			password: password,
+		}),
+	})
+		.then(response => response.json())
+		.then(data => {
+		console.log(data);*/
+		alert('Login successfully!');
+		window.location.href = 'order.html';
+	/*})
+		.catch(error => {
+		console.error('Error:', error);
+		alert('Error submitting the form. Please try again later.');
+	});*/
+}
+	
+function validateAndSubmitForm() {
+	var firstName = document.getElementById('txt_firstn').value;
+	var lastName = document.getElementById('txt_lastn').value;
+	var email = document.getElementById('txt_em').value;
+	const phoneNumber = document.getElementById("txt_phone").value;
+	var password = document.getElementById('txt_password').value;
+	const address = document.getElementById("txt_address").value;
+	const zipCode = document.getElementById("txt_zip").value;
+	const city = document.getElementById("txt_city").value;
+	var state = document.getElementById('slt_state').value;
+	var country = document.getElementById('slt_country').value;
+	
+	if (firstName === '' || lastName === '' || email === '' || phoneNumber === '' || password === '' || address === '' || zipCode === '' || city === '') {
+		alert("Please fill in all fields");
+	} else {
+		if (!validateEmail(email)) {
+			alert('Invalid email format');
+			return;
+		}
+		var phoneRegex = /^\d{10}$/;
+		if (!phoneRegex.test(phoneNumber)) {
+			alert('Please enter a valid 10-digit phone number');
+			return;
+		}
+		if (password.length < 6) {
+			alert('Password must be at least 6 characters password');
+			return;
+		}
+		if (zipCode.length !== 6) {
+			alert('Please enter a valid 6-digit zip code');
+			return;
+		}
+		submitForm(firstName, lastName, email, phoneNumber, password, address, zipCode, city, state, country);
+	}
+}
+
+function validateEmail(email) {
+	var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+	return emailRegex.test(email);
+}
+	
+function submitForm(firstName, lastName, email, phoneNumber, password, address, zipCode, city, state, country) {
+	alert('Registered successfully!');
+	window.location.href = 'order.html';
+}
+	
+let slider = document.querySelector('.slider .list');
+let items = document.querySelectorAll('.slider .list .item');
+let next = document.getElementById('next');
+let prev = document.getElementById('prev');
+let dots = document.querySelectorAll('.slider .dots li');
+
+let lengthItems = items.length - 1;
+let active = 0;
+next.onclick = function(){
+    active = active + 1 <= lengthItems ? active + 1 : 0;
+    reloadSlider();
+}
+prev.onclick = function(){
+    active = active - 1 >= 0 ? active - 1 : lengthItems;
+    reloadSlider();
+}
+let refreshInterval = setInterval(()=> {next.click()}, 3000);
+function reloadSlider(){
+    slider.style.left = -items[active].offsetLeft + 'px';
+    // 
+    let last_active_dot = document.querySelector('.slider .dots li.active');
+    last_active_dot.classList.remove('active');
+    dots[active].classList.add('active');
+
+    clearInterval(refreshInterval);
+    refreshInterval = setInterval(()=> {next.click()}, 3000);
+}
+
+dots.forEach((li, key) => {
+    li.addEventListener('click', ()=>{
+         active = key;
+         reloadSlider();
+    })
+})
+window.onresize = function(event) {
+    reloadSlider();
+};
+</script>
+</body>
+</html>

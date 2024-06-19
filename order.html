@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BookXcess - Book Ordering</title>
+<link rel="icon" href="images/logo.png" type="image/png">
+<link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<!-----------header----------->
+<div class="header">
+  <div class="container">
+    <div class="navbar">
+      <div class="logo"> <a href="home.html"> <img src="images/logo1.png" width="45px" alt=""> </a> </div>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="order.html" class="active">Books</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Cancellation &amp; Return</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+<!-----------product order----------->
+<div class="back">
+  <div class="category">
+    <button class="dropdown-btn">
+		<span class="dropdown-title">Fiction</span>
+		<i class="fa fa-caret-down"></i>
+	</button>
+    <div class="dropdown-container">
+		<a href="#Asian">Asian Literature</a>
+		<a href="#Classics">Classics &amp; Literature</a>
+		<a href="#Crime">Crime, Thriller &amp; Mystery</a>
+		<a href="#Fantasy">Fantasy &amp; Science Fiction</a>
+		<a href="#Graphic">Graphic Novels &amp; Comics</a>
+	</div>
+	
+	<button class="dropdown-btn">
+		<span class="dropdown-title">Non-Fiction</span>
+		<i class="fa fa-caret-down"></i>
+	</button>
+    <div class="dropdown-container">
+		<a href="#Architecture">Architecture &amp; Design</a>
+		<a href="#Business">Business &amp; Economics</a>
+		<a href="#Health">Health &amp; Wellness</a>
+		<a href="#History">History &amp; Politics</a>
+		<a href="#Pets">Pets &amp; Nature</a>
+	</div>
+    <div class="cart-section">
+      <button id="checkoutButton" class="order" onclick="proceedToSummary()">Checkout</button>
+    </div>
+  </div>
+  <div class="main">
+    <h3>-----------------   Fiction   -----------------</h3>
+    <div class="menu">
+      <h2 id="Asian">Asian Literature</h2>
+      <table class="table">
+        <tr>
+          <td><a href="" onclick="addToCart1()"><img src="images/Asian1.jpg" width="230px" alt="" style="border-radius: 25px;"></a></td>
+          <td><a href="" onclick="addToCart2()"><img src="images/Asian2.jpg" width="230px" alt="" style="border-radius: 25px;"></a></td>
+          <td><a href="" onclick="addToCart3()"><img src="images/Asian3.jpg" width="230px" alt="" style="border-radius: 25px;"></a></td>
+        </tr>
+        <tr>
+          <td><a href="product.html">
+            <h5>The Dog</h5>
+			<h5>RM17.90</h5>
+            </a></td>
+          <td><a href="">
+            <h5>Re Jane</h5>
+			<h5>RM19.90</h5>
+            </a></td>
+          <td><a href="">
+            <h5>The Expatriates</h5>
+			<h5>RM17.90</h5>
+            </a></td>
+        </tr>
+      </table>
+      <h2 id="Classics">Classics &amp; Literature</h2>
+      <table class="table">
+        <tr>
+          <td><a href=""><img src="images/Classics1.jpg" width="230px" alt="" style="border-radius: 25px;"></a></td>
+          <td><a href=""><img src="images/Classics2.jpg" width="230px" alt="" style="border-radius: 25px;"></a></td>
+          <td><a href=""><img src="images/Classics3.jpg" width="230px" alt="" style="border-radius: 25px;"></a></td>
+        </tr>
+        <tr>
+          <td><a href="">
+            <h5>The Odyssey</h5>
+			<h5>RM19.90</h5>
+            </a></td>
+          <td><a href="">
+            <h5>Great Expectations</h5>
+			<h5>RM19.90</h5>
+            </a></td>
+          <td><a href="">
+            <h5>Six Days</h5>
+			<h5>RM14.90</h5>
+            </a></td>
+        </tr>
+      </table>
+      <h2 id="Crime">Crime, Thriller &amp; Mystery</h2>
+      <table class="table">
+        <tr>
+          <td><a href=""><img src="images/Crime1.jpg" width="230px" alt="" style="border-radius: 25px;"></a></td>
+          <td><a href=""><img src="images/Crime2.jpg" width="230px" alt="" style="border-radius: 25px;"></a></td>
+          <td><a href=""><img src="images/Crime3.jpg" width="230px" alt="" style="border-radius: 25px;"></a></td>
+        </tr>
+        <tr>
+          <td><a href="">
+            <h5>The Avenger</h5>
+			<h5>RM19.90</h5>
+            </a></td>
+          <td><a href="">
+            <h5>88 Names</h5>
+			<h5>RM19.90</h5>
+            </a></td>
+          <td><a href="">
+            <h5>Shattered Mirror</h5>
+			<h5>RM14.90</h5>
+            </a></td>
+        </tr>
+      </table>
+      <h2 id="Fantasy">Fantasy &amp; Science Fiction</h2>
+      <table class="table">
+        <tr>
+          <td><a href=""><img src="images/Fantasy1.jpg" width="230px" alt="" style="border-radius: 25px;"></a></td>
+          <td><a href=""><img src="images/Fantasy2.jpg" width="230px" alt="" style="border-radius: 25px;"></a></td>
+          <td><a href=""><img src="images/Fantasy3.jpg" width="230px" alt="" style="border-radius: 25px;"></a></td>
+        </tr>
+        <tr>
+          <td><a href="">
+            <h5>American Gods</h5>
+			<h5>RM24.90</h5>
+            </a></td>
+          <td><a href="">
+            <h5>Parable Of The Sower</h5>
+			<h5>RM24.90</h5>
+            </a></td>
+          <td><a href="">
+            <h5>Fragile Things</h5>
+			<h5>RM19.90</h5>
+            </a></td>
+        </tr>
+      </table>
+      <h2 id="Graphic">Graphic Novels &amp; Comics</h2>
+      <table class="table">
+        <tr>
+          <td><a href=""><img src="images/Graphic1.jpg" width="230px" alt="" style="border-radius: 25px;"></a></td>
+          <td><a href=""><img src="images/Graphic2.jpg" width="230px" alt="" style="border-radius: 25px;"></a></td>
+          <td><a href=""><img src="images/Graphic3.jpg" width="230px" alt="" style="border-radius: 25px;"></a></td>
+        </tr>
+        <tr>
+          <td><a href="">
+            <h5>Batman/Superman/Wonder Woman Trinity Deluxe Edition</h5>
+			<h5>RM27.90</h5>
+            </a></td>
+          <td><a href="">
+            <h5>X-Men: The Age Of Apocalypse - Dawn</h5>
+			<h5>RM49.90</h5>
+            </a></td>
+          <td><a href="">
+            <h5>DC Comics Justice League</h5>
+			<h5>RM23.90</h5>
+            </a></td>
+        </tr>
+      </table>
+    </div>
+    <h3>--------------   Non-Fiction   --------------</h3>
+    <div class="menu">
+      <h2 id="Architecture">Architecture &amp; Design</h2>
+      <table class="table">
+        <tr>
+          <td><a href=""><img src="images/Architecture1.jpg" width="230px" alt="" style="border-radius: 25px;"></a></td>
+          <td><a href=""><img src="images/Architecture2.jpg" width="230px" alt="" style="border-radius: 25px;"></a></td>
+          <td><a href=""><img src="images/Architecture3.jpg" width="230px" alt="" style="border-radius: 25px;"></a></td>
+        </tr>
+        <tr>
+          <td><a href="">
+            <h5>Paperscapes: Paris</h5>
+			<h5>RM34.90</h5>
+            </a></td>
+          <td><a href="">
+            <h5>Paperscapes: London</h5>
+			<h5>RM34.90</h5>
+            </a></td>
+          <td><a href="">
+            <h5>Tree Houses</h5>
+			<h5>RM54.90</h5>
+            </a></td>
+        </tr>
+      </table>
+      <h2 id="Business">Business &amp; Economics</h2>
+      <table class="table">
+        <tr>
+          <td><a href=""><img src="images/Business1.jpg" width="230px" alt="" style="border-radius: 25px;"></a></td>
+          <td><a href=""><img src="images/Business2.jpg" width="230px" alt="" style="border-radius: 25px;"></a></td>
+          <td><a href=""><img src="images/Business3.jpg" width="230px" alt="" style="border-radius: 25px;"></a></td>
+        </tr>
+        <tr>
+          <td><a href="">
+            <h5>How To Lie With Statistics</h5>
+			<h5>RM19.90</h5>
+            </a></td>
+          <td><a href="">
+            <h5>The Laundromat</h5>
+			<h5>RM19.90</h5>
+            </a></td>
+          <td><a href="">
+            <h5>Deep Work</h5>
+			<h5>RM29.90</h5>
+            </a></td>
+        </tr>
+      </table>
+      <h2 id="Health">Health &amp; Wellness</h2>
+      <table class="table">
+        <tr>
+          <td><a href=""><img src="images/Health1.jpg" width="230px" alt="" style="border-radius: 25px;"></a></td>
+          <td><a href=""><img src="images/Health2.jpg" width="230px" alt="" style="border-radius: 25px;"></a></td>
+          <td><a href=""><img src="images/Health3.jpg" width="230px" alt="" style="border-radius: 25px;"></a></td>
+        </tr>
+        <tr>
+          <td><a href="">
+            <h5>Being Sober</h5>
+			<h5>RM19.90</h5>
+            </a></td>
+          <td><a href="">
+            <h5>Your Personal Stop Drinking Plan</h5>
+			<h5>RM17.90</h5>
+            </a></td>
+          <td><a href="">
+            <h5>Choose To Lose (3rd Edition)</h5>
+			<h5>RM19.90</h5>
+            </a></td>
+        </tr>
+      </table>
+      <h2 id="History">History &amp; Politics</h2>
+      <table class="table">
+        <tr>
+          <td><a href=""><img src="images/History1.jpg" width="230px" alt="" style="border-radius: 25px;"></a></td>
+          <td><a href=""><img src="images/History2.jpg" width="230px" alt="" style="border-radius: 25px;"></a></td>
+          <td><a href=""><img src="images/History3.jpg" width="230px" alt="" style="border-radius: 25px;"></a></td>
+        </tr>
+        <tr>
+          <td><a href="">
+            <h5>Post Wall, Post Square</h5>
+			<h5>RM24.90</h5>
+            </a></td>
+          <td><a href="">
+            <h5>The Gate To China</h5>
+			<h5>RM24.90</h5>
+            </a></td>
+          <td><a href="">
+            <h5>A Human History Of Emotion</h5>
+			<h5>RM29.90</h5>
+            </a></td>
+        </tr>
+      </table>
+      <h2 id="Pets">Pets &amp; Nature</h2>
+      <table class="table">
+        <tr>
+          <td><a href=""><img src="images/Pets1.jpg" width="230px" alt="" style="border-radius: 25px;"></a></td>
+          <td><a href=""><img src="images/Pets2.jpg" width="230px" alt="" style="border-radius: 25px;"></a></td>
+          <td><a href=""><img src="images/Pets3.jpg" width="230px" alt="" style="border-radius: 25px;"></a></td>
+        </tr>
+        <tr>
+          <td><a href="">
+            <h5>Paperscapes: The Aviary</h5>
+			<h5>RM34.90</h5>
+            </a></td>
+          <td><a href="">
+            <h5>The Life Of Birds</h5>
+			<h5>RM34.90</h5>
+            </a></td>
+          <td><a href="">
+            <h5>Encounters With Nature</h5>
+			<h5>RM49.90</h5>
+            </a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<!-----------footer----------->
+<div class="footer back">
+  <table class="tbl" width="60%;">
+    <tr>
+      <td style="text-align: center;"><a href="home.html"><img src="images/logo.png" alt="" style="width: 50px;"></a><br>
+        <a href="https://www.instagram.com/bookxcess"><i class="fa fa-instagram" aria-hidden="true"></i></a> <a href="https://www.facebook.com/BookXcess"><i class="fa fa-facebook-official" aria-hidden="true"></i></a> <a href="https://www.youtube.com/channel/UCA00dU7ihmJdqey0NO443bA"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></td>
+      <td style="text-align: center;"><a href="order.html">
+        <h3>Order Online</h3>
+        </a> <a href="#">
+        <h3>Privacy Policy</h3>
+        </a></td>
+      <td style="text-align: center;"><a href="#">
+        <h3>Careers</h3>
+        </a> <a href="#">
+        <h3>Contact Us</h3>
+        </a></td>
+    </tr>
+  </table>
+  <h3>All Rights Reserved by Huang Shi Xin AI210414.</h3>
+</div>
+<script>
+const booksData = {
+    "Asian Literature": [
+        { title: "The Dog", price: 17.90, image: "images/Asian1.jpg" },
+        { title: "Re Jane", price: 19.90, image: "images/Asian2.jpg" },
+        { title: "The Expatriates", price: 17.90, image: "images/Asian3.jpg" }
+    ],
+    "Classics & Literature": [
+        { title: "The Odyssey", price: 19.90, image: "images/Classics1.jpg" },
+        { title: "Great Expectations", price: 19.90, image: "images/Classics2.jpg" },
+        { title: "Six Days", price: 14.90, image: "images/Classics3.jpg" }
+    ],
+    "Crime, Thriller & Mystery": [
+        { title: "The Avenger", price: 19.90, image: "images/Crime1.jpg" },
+        { title: "88 Names", price: 19.90, image: "images/Crime2.jpg" },
+        { title: "Shattered Mirror", price: 14.90, image: "images/Crime3.jpg" }
+    ],
+    "Fantasy & Science Fiction": [
+        { title: "American Gods", price: 24.90, image: "images/Fantasy1.jpg" },
+        { title: "Parable Of The Sower", price: 24.90, image: "images/Fantasy2.jpg" },
+        { title: "Fragile Things", price: 19.90, image: "images/Fantasy3.jpg" }
+    ],
+    "Graphic Novels & Comics": [
+        { title: "Batman/Superman/Wonder Woman Trinity Deluxe Edition", price: 27.90, image: "images/Graphic1.jpg" },
+        { title: "X-Men: The Age Of Apocalypse - Dawn", price: 49.90, image: "images/Graphic2.jpg" },
+        { title: "DC Comics Justice League", price: 23.90, image: "images/Graphic3.jpg" }
+    ],
+    "Architecture & Design": [
+        { title: "Paperscapes: Paris", price: 34.90, image: "images/Architecture1.jpg" },
+        { title: "Paperscapes: London", price: 34.90, image: "images/Architecture2.jpg" },
+        { title: "Tree Houses", price: 54.90, image: "images/Architecture3.jpg" }
+    ],
+    "Business & Economics": [
+        { title: "How To Lie With Statistics", price: 19.90, image: "images/Business1.jpg" },
+        { title: "The Laundromat", price: 19.90, image: "images/Business2.jpg" },
+        { title: "Deep Work", price: 29.90, image: "images/Business3.jpg" }
+    ],
+    "Health & Wellness": [
+        { title: "Being Sober", price: 19.90, image: "images/Health1.jpg" },
+        { title: "Your Personal Stop Drinking Plan", price: 17.90, image: "images/Health2.jpg" },
+        { title: "Choose To Lose (3rd Edition)", price: 19.90, image: "images/Health3.jpg" }
+    ],
+    "History & Politics": [
+        { title: "Post Wall, Post Square", price: 24.90, image: "images/History1.jpg" },
+        { title: "The Gate To China", price: 24.90, image: "images/History2.jpg" },
+        { title: "A Human History Of Emotion", price: 29.90, image: "images/History3.jpg" }
+    ],
+    "Pets & Nature": [
+        { title: "Paperscapes: The Aviary", price: 34.90, image: "images/Pets1.jpg" },
+        { title: "The Life Of Birds", price: 34.90, image: "images/Pets2.jpg" },
+        { title: "Encounters With Nature", price: 49.90, image: "images/Pets3.jpg" }
+    ]
+};
+
+function proceedToSummary() {
+	window.location.href = "summary.html";
+}
+	
+function addToCart1() {
+	const productName = "The Dog";
+	const price = 17.90;
+	const quantity = 1 ;
+	
+	const productInfo = {
+		productName: productName,
+		quantity: quantity,
+		image: "images/Asian1.jpg",
+		price: price,
+		total: price * quantity,
+	};
+	
+	const existingCart = JSON.parse(sessionStorage.getItem("cart")) || [];
+	existingCart.push(productInfo);
+	
+	sessionStorage.setItem("cart", JSON.stringify(existingCart));
+	
+	alert(`${quantity} ${productName}(s) added to the cart!`);
+	
+	setTimeout(function () {
+		window.location.href = "productselection.html";
+	}, 500);
+}
+	
+function addToCart2() {
+	const productName = "Re Jane";
+	const price = 19.90;
+	const quantity = 1 ;
+	
+	const productInfo = {
+		productName: productName,
+		quantity: quantity,
+		image: "images/Asian2.jpg",
+		price: price,
+		total: price * quantity,
+	};
+	
+	const existingCart = JSON.parse(sessionStorage.getItem("cart")) || [];
+	existingCart.push(productInfo);
+	
+	sessionStorage.setItem("cart", JSON.stringify(existingCart));
+	
+	alert(`${quantity} ${productName}(s) added to the cart!`);
+	
+	setTimeout(function () {
+		window.location.href = "productselection.html";
+	}, 500);
+}
+	
+function addToCart3() {
+	const productName = "The Expatriates";
+	const price = 17.90;
+	const quantity = 1 ;
+	
+	const productInfo = {
+		productName: productName,
+		quantity: quantity,
+		image: "images/Asian3.jpg",
+		price: price,
+		total: price * quantity,
+	};
+	
+	const existingCart = JSON.parse(sessionStorage.getItem("cart")) || [];
+	existingCart.push(productInfo);
+	
+	sessionStorage.setItem("cart", JSON.stringify(existingCart));
+	
+	alert(`${quantity} ${productName}(s) added to the cart!`);
+	
+	setTimeout(function () {
+		window.location.href = "productselection.html";
+	}, 500);
+}
+	
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active1");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
+</body>
+</html>
